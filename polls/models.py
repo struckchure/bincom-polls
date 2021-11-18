@@ -1,6 +1,10 @@
 from django.db import models
 
 
+class LGA(models.Model):
+    pass
+
+
 class PollUnit(models.Model):
     polling_unit_id = models.PositiveBigIntegerField(blank=False)
     ward_id = models.PositiveBigIntegerField(blank=False)
