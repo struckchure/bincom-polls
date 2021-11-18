@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="py-4 text-2xl">
+        <label class="font-bold underline">Polls units</label>
+        /
+        <span class="hover:underline">
+            <a href="{% url 'polls-new' %}">
+                add-poll-unit
+            </a>
+        </span>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="grid grid-cols-3">
+            {% for field in add_poll_unit_form %}
+                <div>
+                    <label class="block">{{ field.label }}</label>
+                    {{field}}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="py-4">
+            <button type="submit" class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition duration-200">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

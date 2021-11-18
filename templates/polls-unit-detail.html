@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="shadow-lg bg-gray-800 rounded-lg p-4 w-[300px] h-auto mx-auto">
+        <!-- title -->
+        <label class="font-bold text-2xl">{{poll_unit.polling_unit_name}}</label>
+        <!-- content -->
+        <div>
+            <small>{{poll_unit.date_entered}}</small>
+            <p>
+                {{poll_unit.polling_unit_description}}
+            </p>
+            <label class="text-gray-400 text-xl">{{poll_unit.polling_unit_number}}</label>
+            <label class="italic text-sm block">lat , lon : {{poll_unit.lat}} , {{poll_unit.long}}</label>
+        </div>
+        <!-- footer -->
+    </div>
+</div>
+{% endblock content %}

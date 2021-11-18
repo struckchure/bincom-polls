@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="py-4 text-2xl">
+        <label class="font-bold underline">Polls units</label>
+        /
+        {% if lgas %}
+            <div class="relative inline-block text-left">
+                <div>
+                    <button
+                        type="button"
+                        class="inline-flex justify-center w-full rounded-md shadow-sm text-2xl font-medium"
+                        id="menu-button"
+                        onclick="toggle_drop_down()"
+                        aria-expanded="true"
+                        aria-haspopup="true"
+                    >
+                        {{lga_id}}
+                        <!-- Heroicon name: solid/chevron-down -->
+                        <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div id="menu-panel" class="transform opacity-0 scale-0 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="py-1" role="none">
+                        {% for lga in lgas %}
+                            <a href="{% url 'lga-polls-list' lga %}" class="text-gray-700 block px-4 py-2 text-sm" tabindex="-1">LGA {{lga}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <table class="w-full bg-gray-800 shadow-lg rounded-lg">
+        <thead class="bg-[#333]">
+            <tr class="text-white text-left">
+                <th class="font-bold py-2 text-center">#</th>
+                <th class="font-bold py-2 px-4">Polling unit</th>
+                <th class="font-bold py-2 px-4">Polling unit number</th>
+                <th class="font-bold py-2 px-4">Polling unit description</th>
+                <th class="font-bold py-2 px-4">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for poll_unit in poll_units %}
+                <tr class="text-white text-left border-t-[1px] border-gray-900 hover:bg-gray-500 hover:shadow-lg transition duration-200 cursor-pointer">
+                    <td class="py-2 text-center">{{ forloop.counter }}</td>
+                    <td class="py-2 px-4">{{poll_unit.polling_unit_name}}</td>
+                    <td class="py-2 px-4">{{poll_unit.polling_unit_number}}</td>
+                    <td class="py-2 px-4">{{poll_unit.polling_unit_description}}</td>
+                    <td class="py-2 px-4 w-5">
+                        <a href="{% url 'polls-details' poll_unit.polling_unit_number %}">
+                            <button class="p-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200">
+                                view
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        const __open_classes = ['transform', 'opacity-100', 'scale-100', 'transition', 'ease-out', 'duration-100']
+        const __close_classes = ['transition', 'ease-in', 'duration-75', 'transform', 'opacity-0', 'scale-0']
+
+        function open_drop_down (element) {
+            for (const close_class of __close_classes) {
+                element.classList.remove(close_class)
+            }
+
+            for (const open_class of __open_classes) {
+                element.classList.add(open_class)
+            }
+        }
+
+        function close_drop_down (element) {
+            for (const open_class of __open_classes) {
+                element.classList.remove(open_class)
+            }
+
+            for (const close_class of __close_classes) {
+                element.classList.add(close_class)
+            }
+        }
+
+        function toggle_drop_down () {
+            const element = document.querySelector('#menu-panel')
+
+            if (element.classList.contains('opacity-0')) {
+                open_drop_down(element)
+            } else {
+                close_drop_down(element)
+            }
+        }
+    </script>
+</div>
+{% endblock content %}
