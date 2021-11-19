@@ -63,7 +63,7 @@ class LGAPollUnitList(View):
         poll_units = PollUnit.objects.filter(lga_id_id=lga_id).order_by("-date_entered")
 
         if not poll_units.exists():
-            messages.error(f"LGA with id {lga_id} not found")
+            messages.error(messages, f"Polling unit(s) with id {lga_id} not found")
             return redirect("lga-list")
 
         lgas = LGA.objects.order_by("-date_entered")
