@@ -67,7 +67,7 @@ class LGAPollUnitList(View):
             return redirect("lga-list")
 
         lgas = LGA.objects.order_by("-date_entered")
-        lga = LGA.objects.get(lga_id=lga_id)
+        lga = PollUnit.objects.get(lga_id=lga_id)
 
         context = {"poll_units": poll_units, "lga": lga, "lgas": list(set(lgas))}
 
