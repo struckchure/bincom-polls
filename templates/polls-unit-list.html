@@ -24,10 +24,10 @@
                     </button>
                 </div>
 
-                <div id="menu-panel" class="transform opacity-0 scale-0 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div id="menu-panel" class="overflow-y-auto transform opacity-0 scale-0 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                     <div class="py-1" role="none">
                         {% for lga in lgas %}
-                            <a href="{% url 'lga-polls-list' lga %}" class="text-gray-700 block px-4 py-2 text-sm" tabindex="-1">LGA {{lga}}</a>
+                            <a href="{% url 'lga-polls-list' lga.id %}" class="text-gray-700 block px-4 py-2 text-sm" tabindex="-1">LGA {{lga}}</a>
                         {% endfor %}
                     </div>
                 </div>
