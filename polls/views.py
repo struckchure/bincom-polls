@@ -61,8 +61,14 @@ class LGAListView(View):
 class LGAPollUnitList(View):
     def get(self, request, lga_id):
         poll_units = PollUnit.objects.filter(lga_id_id=lga_id).order_by("-date_entered")
-        lgas = LGA.objects.order_by("-date_entered")
 
-        context = {"poll_units": poll_units, "lga_id": lga_id, "lgas": list(set(lgas))}
+        if not poll_units.exists():
+            messages.error(f"LGA with id {lga_id} not found")
+            return redirect("lga-list")
+
+        lgas = LGA.objects.order_by("-date_entered")
+        lga = LGA.objects.get(lga_id=lga_id)
+
+        context = {"poll_units": poll_units, "lga": lga, "lgas": list(set(lgas))}
 
         return render(request, "polls-unit-list.html", context)
