@@ -5,7 +5,7 @@
     <div class="grid grid-cols-6">
         {% for lga in lgas %}
             <li>
-                <a href="{% url 'lga-polls-list' lga %}" class="underline text-white">LGA {{ lga }}</a>
+                <a href="{% url 'lga-polls-list' lga.id %}" class="underline text-white">{{ lga }}</a>
             </li>
         {% endfor %}
     </div>

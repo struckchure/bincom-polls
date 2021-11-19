@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.views.generic import View
 from django.contrib import messages
 
-from polls.models import PollUnit
+from polls.models import LGA, PollUnit
 from polls.forms import AddPollUnitForm
 
 
@@ -51,9 +51,8 @@ class PollUnitDetailView(View):
 
 class LGAListView(View):
     def get(self, request):
-        lgas = PollUnit.objects.order_by("-date_entered").values_list(
-            "lga_id", flat=True
-        )
+        lgas = LGA.objects.order_by("-date_entered")
+
         context = {"lgas": list(set(lgas))}
 
         return render(request, "lga-list.html", context)
@@ -61,10 +60,8 @@ class LGAListView(View):
 
 class LGAPollUnitList(View):
     def get(self, request, lga_id):
-        poll_units = PollUnit.objects.filter(lga_id=lga_id).order_by("-date_entered")
-        lgas = PollUnit.objects.order_by("-date_entered").values_list(
-            "lga_id", flat=True
-        )
+        poll_units = PollUnit.objects.filter(lga_id_id=lga_id).order_by("-date_entered")
+        lgas = LGA.objects.order_by("-date_entered")
 
         context = {"poll_units": poll_units, "lga_id": lga_id, "lgas": list(set(lgas))}
 

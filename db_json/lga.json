@@ -1,0 +1,33 @@
+[
+{"type":"header","version":"4.9.5deb2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"private"},
+{"type":"table","name":"lga","database":"private","data":
+[
+{"uniqueid":"1","lga_id":"1","lga_name":"Aniocha North","state_id":"25","lga_description":"Aniocha North","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.2"},
+{"uniqueid":"2","lga_id":"2","lga_name":"Aniocha - South","state_id":"25","lga_description":"Aniocha - South","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.1"},
+{"uniqueid":"3","lga_id":"5","lga_name":"Ethiope East","state_id":"25","lga_description":"Ethiope East","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.5"},
+{"uniqueid":"4","lga_id":"6","lga_name":"Ethiope West","state_id":"25","lga_description":"Ethiope West","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.6"},
+{"uniqueid":"5","lga_id":"7","lga_name":"Ika North - East","state_id":"25","lga_description":"Ika North - East","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.8"},
+{"uniqueid":"6","lga_id":"8","lga_name":"Ika - South","state_id":"25","lga_description":"Ika - South","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.7"},
+{"uniqueid":"7","lga_id":"9","lga_name":"Isoko North","state_id":"25","lga_description":"Isoko North","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.9"},
+{"uniqueid":"8","lga_id":"10","lga_name":"Isoko South","state_id":"25","lga_description":"Isoko South","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.10"},
+{"uniqueid":"9","lga_id":"11","lga_name":"Ndokwa East","state_id":"25","lga_description":"Ndokwa East","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.11"},
+{"uniqueid":"10","lga_id":"12","lga_name":"Ndokwa West","state_id":"25","lga_description":"Ndokwa West","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.12"},
+{"uniqueid":"11","lga_id":"13","lga_name":"Okpe","state_id":"25","lga_description":"Okpe","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.13"},
+{"uniqueid":"12","lga_id":"14","lga_name":"Oshimili - North","state_id":"25","lga_description":"Oshimili - North","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.14"},
+{"uniqueid":"13","lga_id":"15","lga_name":"Oshimili - South","state_id":"25","lga_description":"Oshimili - South","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.15"},
+{"uniqueid":"14","lga_id":"16","lga_name":"Patani","state_id":"25","lga_description":"Patani","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.16"},
+{"uniqueid":"15","lga_id":"17","lga_name":"Sapele","state_id":"25","lga_description":"Sapele","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.17"},
+{"uniqueid":"16","lga_id":"18","lga_name":"Udu","state_id":"25","lga_description":"Udu","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.18"},
+{"uniqueid":"17","lga_id":"19","lga_name":"Ughelli North","state_id":"25","lga_description":"Ughelli North","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.19"},
+{"uniqueid":"18","lga_id":"20","lga_name":"Ughelli South","state_id":"25","lga_description":"Ughelli South","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.20"},
+{"uniqueid":"19","lga_id":"21","lga_name":"Ukwuani","state_id":"25","lga_description":"Ukwuani","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.21"},
+{"uniqueid":"20","lga_id":"22","lga_name":"Uvwie","state_id":"25","lga_description":"Uvwie","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.22"},
+{"uniqueid":"21","lga_id":"31","lga_name":"Bomadi","state_id":"25","lga_description":"Bomadi","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.3"},
+{"uniqueid":"22","lga_id":"32","lga_name":"Burutu","state_id":"25","lga_description":"Burutu","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.4"},
+{"uniqueid":"23","lga_id":"33","lga_name":"Warri North","state_id":"25","lga_description":"Warri North","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.23"},
+{"uniqueid":"24","lga_id":"34","lga_name":"Warri South","state_id":"25","lga_description":"Warri South","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.24"},
+{"uniqueid":"25","lga_id":"35","lga_name":"Warri South West","state_id":"25","lga_description":"Warri South West","entered_by_user":"Bincom","date_entered":"0000-00-00 00:00:00","user_ip_address":"127.0.0.25"}
+]
+}
+]

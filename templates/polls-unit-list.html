@@ -42,6 +42,7 @@
                 <th class="font-bold py-2 px-4">Polling unit</th>
                 <th class="font-bold py-2 px-4">Polling unit number</th>
                 <th class="font-bold py-2 px-4">Polling unit description</th>
+                <th class="font-bold py-2 px-4">LGA</th>
                 <th class="font-bold py-2 px-4">Actions</th>
             </tr>
         </thead>
@@ -52,6 +53,7 @@
                     <td class="py-2 px-4">{{poll_unit.polling_unit_name}}</td>
                     <td class="py-2 px-4">{{poll_unit.polling_unit_number}}</td>
                     <td class="py-2 px-4">{{poll_unit.polling_unit_description}}</td>
+                    <td class="py-2 px-4">{{poll_unit.lga_id.lga_name}}</td>
                     <td class="py-2 px-4 w-5">
                         <a href="{% url 'polls-details' poll_unit.polling_unit_number %}">
                             <button class="p-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200">
