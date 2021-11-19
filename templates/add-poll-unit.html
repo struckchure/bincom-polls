@@ -15,7 +15,7 @@
     <form method="post">
         {% csrf_token %}
 
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 gap-4">
             {% for field in add_poll_unit_form %}
                 <div>
                     <label class="block">{{ field.label }}</label>
